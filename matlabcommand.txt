@@ -1,0 +1,1658 @@
+file = dir('E:\20151023\raspberry pi\*.txt');
+for n =1:length(file)
+ temp=dlmread(['E:\20151023\raspberry pi\',file(n).name]);
+eval([file(n).name,'=temp;'])
+end
+
+binfile = fopen('20151028_101240');
+data1 = fread(binfile,'short');
+
+ r0_1l = dlmread('0_1l.txt');
+ r0_2l = dlmread('0_2l.txt');
+ r0_3l = dlmread('0_3l.txt');
+ r1_1l = dlmread('1_1l.txt');
+ r1_2l = dlmread('1_2l.txt');
+ r1_3l = dlmread('1_3l.txt');
+ r2_1l = dlmread('2_1l.txt');
+ r2_2l = dlmread('2_2l.txt');
+ r2_3l = dlmread('2_3l.txt');
+ r3_1l = dlmread('3_1l.txt');
+ r3_2l = dlmread('3_2l.txt');
+ r3_3l = dlmread('3_3l.txt');
+ r4_1l = dlmread('4_1l.txt');
+ r4_2l = dlmread('4_2l.txt');
+ r4_3l = dlmread('4_3l.txt');
+ r5_1l = dlmread('5_1l.txt');
+ r5_2l = dlmread('5_2l.txt');
+ r5_3l = dlmread('5_3l.txt');
+ r6_1l = dlmread('6_1l.txt');
+ r6_2l = dlmread('6_2l.txt');
+ r6_3l = dlmread('6_3l.txt');
+ r7_1l = dlmread('7_1l.txt');
+ r7_2l = dlmread('7_2l.txt');
+ r7_3l = dlmread('7_3l.txt');
+ r8_1l = dlmread('8_1l.txt');
+ r8_2l = dlmread('8_2l.txt');
+ r8_3l = dlmread('8_3l.txt');
+ r9_1l = dlmread('9_1l.txt');
+ r9_2l = dlmread('9_2l.txt');
+ r9_3l = dlmread('9_3l.txt');
+
+
+ r0_1r = dlmread('0_1r.txt');
+ r0_2r = dlmread('0_2r.txt');
+ r0_3r = dlmread('0_3r.txt');
+ r1_1r = dlmread('1_1r.txt');
+ r1_2r = dlmread('1_2r.txt');
+ r1_3r = dlmread('1_3r.txt');
+ r2_1r = dlmread('2_1r.txt');
+ r2_2r = dlmread('2_2r.txt');
+ r2_3r = dlmread('2_3r.txt');
+ r3_1r = dlmread('3_1r.txt');
+ r3_2r = dlmread('3_2r.txt');
+ r3_3r = dlmread('3_3r.txt');
+ r4_1r = dlmread('4_1r.txt');
+ r4_2r = dlmread('4_2r.txt');
+ r4_3r = dlmread('4_3r.txt');
+ r5_1r = dlmread('5_1r.txt');
+ r5_2r = dlmread('5_2r.txt');
+ r5_3r = dlmread('5_3r.txt');
+ r6_1r = dlmread('6_1r.txt');
+ r6_2r = dlmread('6_2r.txt');
+ r6_3r = dlmread('6_3r.txt');
+ r7_1r = dlmread('7_1r.txt');
+ r7_2r = dlmread('7_2r.txt');
+ r7_3r = dlmread('7_3r.txt');
+ r8_1r = dlmread('8_1r.txt');
+ r8_2r = dlmread('8_2r.txt');
+ r8_3r = dlmread('8_3r.txt');
+ r9_1r = dlmread('9_1r.txt');
+ r9_2r = dlmread('9_2r.txt');
+ r9_3r = dlmread('9_3r.txt');
+
+
+[x fs nbits] = wavread('0_1.wav');
+
+s0_1 = wavread('0_1.wav');
+s0_2 = wavread('0_2.wav');
+s0_3 = wavread('0_3.wav');
+s0_4 = wavread('0_4.wav');
+s0_5 = wavread('0_5.wav');
+s1_1 = wavread('1_1.wav');
+s1_2 = wavread('1_2.wav');
+s1_3 = wavread('1_3.wav');
+s1_4 = wavread('1_4.wav');
+s1_5 = wavread('1_5.wav');
+s2_1 = wavread('2_1.wav');
+s2_2 = wavread('2_2.wav');
+s2_3 = wavread('2_3.wav');
+s2_4 = wavread('2_4.wav');
+s2_5 = wavread('2_5.wav');
+s3_1 = wavread('3_1.wav');
+s3_2 = wavread('3_2.wav');
+s3_3 = wavread('3_3.wav');
+s3_4 = wavread('3_4.wav');
+s3_5 = wavread('3_5.wav');
+s4_1 = wavread('4_1.wav');
+s4_2 = wavread('4_2.wav');
+s4_3 = wavread('4_3.wav');
+s4_4 = wavread('4_4.wav');
+s4_5 = wavread('4_5.wav');
+s5_1 = wavread('5_1.wav');
+s5_2 = wavread('5_2.wav');
+s5_3 = wavread('5_3.wav');
+s5_4 = wavread('5_4.wav');
+s5_5 = wavread('5_5.wav');
+s6_1 = wavread('6_1.wav');
+s6_2 = wavread('6_2.wav');
+s6_3 = wavread('6_3.wav');
+s6_4 = wavread('6_4.wav');
+s6_5 = wavread('6_5.wav');
+s7_1 = wavread('7_1.wav');
+s7_2 = wavread('7_2.wav');
+s7_3 = wavread('7_3.wav');
+s7_4 = wavread('7_4.wav');
+s7_5 = wavread('7_5.wav');
+s8_1 = wavread('8_1.wav');
+s8_2 = wavread('8_2.wav');
+s8_3 = wavread('8_3.wav');
+s8_4 = wavread('8_4.wav');
+s8_5 = wavread('8_5.wav');
+s9_1 = wavread('9_1.wav');
+s9_2 = wavread('9_2.wav');
+s9_3 = wavread('9_3.wav');
+s9_4 = wavread('9_4.wav');
+s9_5 = wavread('9_5.wav');
+
+
+m0_1 = wavread('0_1.wav');
+m0_2 = wavread('0_2.wav');
+m0_3 = wavread('0_3.wav');
+m0_4 = wavread('0_4.wav');
+m1_1 = wavread('1_1.wav');
+m1_2 = wavread('1_2.wav');
+m1_3 = wavread('1_3.wav');
+m1_4 = wavread('1_4.wav');
+m2_1 = wavread('2_1.wav');
+m2_2 = wavread('2_2.wav');
+m2_3 = wavread('2_3.wav');
+m2_4 = wavread('2_4.wav');
+m3_1 = wavread('3_1.wav');
+m3_2 = wavread('3_2.wav');
+m3_3 = wavread('3_3.wav');
+m3_4 = wavread('3_4.wav');
+m4_1 = wavread('4_1.wav');
+m4_2 = wavread('4_2.wav');
+m4_3 = wavread('4_3.wav');
+m4_4 = wavread('4_4.wav');
+m5_1 = wavread('5_1.wav');
+m5_2 = wavread('5_2.wav');
+m5_3 = wavread('5_3.wav');
+m5_4 = wavread('5_4.wav');
+m6_1 = wavread('6_1.wav');
+m6_2 = wavread('6_2.wav');
+m6_3 = wavread('6_3.wav');
+m6_4 = wavread('6_4.wav');
+m7_1 = wavread('7_1.wav');
+m7_2 = wavread('7_2.wav');
+m7_3 = wavread('7_3.wav');
+m7_4 = wavread('7_4.wav');
+m8_1 = wavread('8_1.wav');
+m8_2 = wavread('8_2.wav');
+m8_3 = wavread('8_3.wav');
+m8_4 = wavread('8_4.wav');
+m9_1 = wavread('9_1.wav');
+m9_2 = wavread('9_2.wav');
+m9_3 = wavread('9_3.wav');
+m9_4 = wavread('9_4.wav');
+
+
+
+[b,a]=butter(6,[0.5172,0.5862],'bandpass');%  58Khz 16Khz
+
+[b,a]=butter(3,[0.748,0.793],'bandpass');% 44.1Khz  17Khz
+[b,a]=butter(3,[0.783,0.800],'bandpass');      % 48Khz 18800hz~19200hz 19Khz
+[b,a]=butter(3,[0.8526,0.8707],'bandpass');     % 18800hz~19200hz 19Khz 44.1Khz (f/fs)*2
+[b,a]=butter(3,[0.897,0.916],'bandpass');     % 19800hz~20200hz 20Khz  44.1Khz (f/fs)*2
+
+ binfile = fopen('111111111');
+ data1 = fread(binfile,'short');
+ binfile = fopen('222222222');
+ data2 = fread(binfile,'short');
+ binfile = fopen('333333333');
+ data3 = fread(binfile,'short');
+ [b,a]=butter(3,[0.748,0.793],'bandpass');
+ fdata1=filter(b,a,data1);
+ fdata2=filter(b,a,data2);
+ fdata3=filter(b,a,data3);
+ binfile = fopen('ssssssssss');
+ datas = fread(binfile,'short');
+ fdatas=filter(b,a,datas);
+ plot(data1);
+
+
+f0_1l=filter(b,a,r0_1l);
+f0_2l=filter(b,a,r0_2l);
+f0_3l=filter(b,a,r0_3l);
+f1_1l=filter(b,a,r1_1l);
+f1_2l=filter(b,a,r1_2l);
+f1_3l=filter(b,a,r1_3l);
+f2_1l=filter(b,a,r2_1l);
+f2_2l=filter(b,a,r2_2l);
+f2_3l=filter(b,a,r2_3l);
+f3_1l=filter(b,a,r3_1l);
+f3_2l=filter(b,a,r3_2l);
+f3_3l=filter(b,a,r3_3l);
+f4_1l=filter(b,a,r4_1l);
+f4_2l=filter(b,a,r4_2l);
+f4_3l=filter(b,a,r4_3l);
+f5_1l=filter(b,a,r5_1l);
+f5_2l=filter(b,a,r5_2l);
+f5_3l=filter(b,a,r5_3l);
+f6_1l=filter(b,a,r6_1l);
+f6_2l=filter(b,a,r6_2l);
+f6_3l=filter(b,a,r6_3l);
+f7_1l=filter(b,a,r7_1l);
+f7_2l=filter(b,a,r7_2l);
+f7_3l=filter(b,a,r7_3l);
+f8_1l=filter(b,a,r8_1l);
+f8_2l=filter(b,a,r8_2l);
+f8_3l=filter(b,a,r8_3l);
+f9_1l=filter(b,a,r9_1l);
+f9_2l=filter(b,a,r9_2l);
+f9_3l=filter(b,a,r9_3l);
+
+
+
+f0_1=filter(b,a,s0_1);
+f0_2=filter(b,a,s0_2);
+f0_3=filter(b,a,s0_3);
+f0_4=filter(b,a,s0_4);
+f0_5=filter(b,a,s0_5);
+f1_1=filter(b,a,s1_1);
+f1_2=filter(b,a,s1_2);
+f1_3=filter(b,a,s1_3);
+f1_4=filter(b,a,s1_4);
+f1_5=filter(b,a,s1_5);
+f2_1=filter(b,a,s2_1);
+f2_2=filter(b,a,s2_2);
+f2_3=filter(b,a,s2_3);
+f2_4=filter(b,a,s2_4);
+f2_5=filter(b,a,s2_5);
+f3_1=filter(b,a,s3_1);
+f3_2=filter(b,a,s3_2);
+f3_3=filter(b,a,s3_3);
+f3_4=filter(b,a,s3_4);
+f3_5=filter(b,a,s3_5);
+f4_1=filter(b,a,s4_1);
+f4_2=filter(b,a,s4_2);
+f4_3=filter(b,a,s4_3);
+f4_4=filter(b,a,s4_4);
+f4_5=filter(b,a,s4_5);
+f5_1=filter(b,a,s5_1);
+f5_2=filter(b,a,s5_2);
+f5_3=filter(b,a,s5_3);
+f5_4=filter(b,a,s5_4);
+f5_5=filter(b,a,s5_5);
+f6_1=filter(b,a,s6_1);
+f6_2=filter(b,a,s6_2);
+f6_3=filter(b,a,s6_3);
+f6_4=filter(b,a,s6_4);
+f6_5=filter(b,a,s6_5);
+f7_1=filter(b,a,s7_1);
+f7_2=filter(b,a,s7_2);
+f7_3=filter(b,a,s7_3);
+f7_4=filter(b,a,s7_4);
+f7_5=filter(b,a,s7_5);
+f8_1=filter(b,a,s8_1);
+f8_2=filter(b,a,s8_2);
+f8_3=filter(b,a,s8_3);
+f8_4=filter(b,a,s8_4);
+f8_5=filter(b,a,s8_5);
+f9_1=filter(b,a,s9_1);
+f9_2=filter(b,a,s9_2);
+f9_3=filter(b,a,s9_3);
+f9_4=filter(b,a,s9_4);
+f9_5=filter(b,a,s9_5);
+
+
+
+f0_1r=filter(b,a,r0_1r);
+f0_2r=filter(b,a,r0_2r);
+f0_3r=filter(b,a,r0_3r);
+f1_1r=filter(b,a,r1_1r);
+f1_2r=filter(b,a,r1_2r);
+f1_3r=filter(b,a,r1_3r);
+f2_1r=filter(b,a,r2_1r);
+f2_2r=filter(b,a,r2_2r);
+f2_3r=filter(b,a,r2_3r);
+f3_1r=filter(b,a,r3_1r);
+f3_2r=filter(b,a,r3_2r);
+f3_3r=filter(b,a,r3_3r);
+f4_1r=filter(b,a,r4_1r);
+f4_2r=filter(b,a,r4_2r);
+f4_3r=filter(b,a,r4_3r);
+f5_1r=filter(b,a,r5_1r);
+f5_2r=filter(b,a,r5_2r);
+f5_3r=filter(b,a,r5_3r);
+f6_1r=filter(b,a,r6_1r);
+f6_2r=filter(b,a,r6_2r);
+f6_3r=filter(b,a,r6_3r);
+f7_1r=filter(b,a,r7_1r);
+f7_2r=filter(b,a,r7_2r);
+f7_3r=filter(b,a,r7_3r);
+f8_1r=filter(b,a,r8_1r);
+f8_2r=filter(b,a,r8_2r);
+f8_3r=filter(b,a,r8_3r);
+f9_1r=filter(b,a,r9_1r);
+f9_2r=filter(b,a,r9_2r);
+f9_3r=filter(b,a,r9_3r);
+
+subplot(211);plot(r0_1l);
+subplot(212);plot(f0_1l);
+figure;
+subplot(211);plot(r1_2l);
+subplot(212);plot(f1_2l);
+figure;
+subplot(211);plot(r2_1l);
+subplot(212);plot(f2_1l);
+figure;
+subplot(211);plot(r3_1l);
+subplot(212);plot(f3_1l);
+figure;
+subplot(211);plot(r4_2l);
+subplot(212);plot(f4_2l);
+figure;
+subplot(211);plot(r5_1l);
+subplot(212);plot(f5_1l);
+figure;
+subplot(211);plot(r6_1l);
+subplot(212);plot(f6_1l);
+figure;
+subplot(211);plot(r7_1l);
+subplot(212);plot(f7_1l);
+figure;
+subplot(211);plot(r8_1l);
+subplot(212);plot(f8_1l);
+figure;
+subplot(211);plot(r9_2l);
+subplot(212);plot(f9_2l);
+
+plot(m0_1);grid on;
+figure;
+plot(m0_2);grid on;
+figure;
+plot(m0_3);grid on;
+figure;
+plot(m0_4);grid on;
+
+plot(m1_1);grid on;
+figure;
+plot(m1_2);grid on;
+figure;
+plot(m1_3);grid on;
+figure;
+plot(m1_4);grid on;
+
+plot(m2_1);grid on;
+figure;
+plot(m2_2);grid on;
+figure;
+plot(m2_3);grid on;
+figure;
+plot(m2_4);grid on;
+
+plot(m3_1);grid on;
+figure;
+plot(m3_2);grid on;
+figure;
+plot(m3_3);grid on;
+figure;
+plot(m3_4);grid on;
+
+plot(m4_1);grid on;
+figure;
+plot(m4_2);grid on;
+figure;
+plot(m4_3);grid on;
+figure;
+plot(m4_4);grid on;
+
+plot(m5_1);grid on;
+figure;
+plot(m5_2);grid on;
+figure;
+plot(m5_3);grid on;
+figure;
+plot(m5_4);grid on;
+
+plot(m6_1);grid on;
+figure;
+plot(m6_2);grid on;
+figure;
+plot(m6_3);grid on;
+figure;
+plot(m6_4);grid on;
+
+plot(m7_1);grid on;
+figure;
+plot(m7_2);grid on;
+figure;
+plot(m7_3);grid on;
+figure;
+plot(m7_4);grid on;
+
+plot(m8_1);grid on;
+figure;
+plot(m8_2);grid on;
+figure;
+plot(m8_3);grid on;
+figure;
+plot(m8_4);grid on;
+
+plot(m9_1);grid on;
+figure;
+plot(m9_2);grid on;
+figure;
+plot(m9_3);grid on;
+figure;
+plot(m9_4);grid on;
+
+[d,c]=butter(6,[0.6802,0.7709],'bandpass');
+
+fm0_1 = filter(d,c,m0_1);
+fm0_2 = filter(d,c,m0_2);
+fm0_3 = filter(d,c,m0_3);
+fm0_4 = filter(d,c,m0_4);
+fm1_1 = filter(d,c,m1_1);
+fm1_2 = filter(d,c,m1_2);
+fm1_3 = filter(d,c,m1_3);
+fm1_4 = filter(d,c,m1_4);
+fm2_1 = filter(d,c,m2_1);
+fm2_2 = filter(d,c,m2_2);
+fm2_3 = filter(d,c,m2_3);
+fm2_4 = filter(d,c,m2_4);
+fm3_1 = filter(d,c,m3_1);
+fm3_2 = filter(d,c,m3_2);
+fm3_3 = filter(d,c,m3_3);
+fm3_4 = filter(d,c,m3_4);
+fm4_1 = filter(d,c,m4_1);
+fm4_2 = filter(d,c,m4_2);
+fm4_3 = filter(d,c,m4_3);
+fm4_4 = filter(d,c,m4_4);
+fm5_1 = filter(d,c,m5_1);
+fm5_2 = filter(d,c,m5_2);
+fm5_3 = filter(d,c,m5_3);
+fm5_4 = filter(d,c,m5_4);
+fm6_1 = filter(d,c,m6_1);
+fm6_2 = filter(d,c,m6_2);
+fm6_3 = filter(d,c,m6_3);
+fm6_4 = filter(d,c,m6_4);
+fm7_1 = filter(d,c,m7_1);
+fm7_2 = filter(d,c,m7_2);
+fm7_3 = filter(d,c,m7_3);
+fm7_4 = filter(d,c,m7_4);
+fm8_1 = filter(d,c,m8_1);
+fm8_2 = filter(d,c,m8_2);
+fm8_3 = filter(d,c,m8_3);
+fm8_4 = filter(d,c,m8_4);
+fm9_1 = filter(d,c,m9_1);
+fm9_2 = filter(d,c,m9_2);
+fm9_3 = filter(d,c,m9_3);
+fm9_4 = filter(d,c,m9_4);
+
+
+subplot(211);plot(m0_1);
+subplot(212);plot(fm0_1);
+figure;
+subplot(211);plot(m1_1);
+subplot(212);plot(fm1_1);
+figure;
+subplot(211);plot(m2_1);
+subplot(212);plot(fm2_1);
+figure;
+subplot(211);plot(m3_1);
+subplot(212);plot(fm3_1);
+figure;
+subplot(211);plot(m4_1);
+subplot(212);plot(fm4_1);
+figure;
+subplot(211);plot(m5_1);
+subplot(212);plot(fm5_1);
+figure;
+subplot(211);plot(m6_1);
+subplot(212);plot(fm6_1);
+figure;
+subplot(211);plot(m7_1);
+subplot(212);plot(fm7_1);
+figure;
+subplot(211);plot(m8_1);
+subplot(212);plot(fm8_1);
+figure;
+subplot(211);plot(m9_1);
+subplot(212);plot(fm9_1);
+
+
+
+
+
+
+plot(s0_1);grid on;
+figure;
+plot(s0_2);grid on;
+figure;
+plot(s0_3);grid on;
+figure;
+plot(s0_4);grid on;
+figure;
+plot(s1_1);grid on;
+figure;
+plot(s1_2);grid on;
+figure;
+plot(s1_3);grid on;
+figure;
+plot(s1_4);grid on;
+figure;
+plot(s2_1);grid on;
+figure;
+plot(s2_2);grid on;
+figure;
+plot(s2_3);grid on;
+figure;
+plot(s2_4);grid on;
+figure;
+plot(s3_1);grid on;
+figure;
+plot(s3_2);grid on;
+figure;
+plot(s3_3);grid on;
+figure;
+plot(s3_4);grid on;
+figure;
+plot(s4_1);grid on;
+figure;
+plot(s4_2);grid on;
+figure;
+plot(s4_3);grid on;
+figure;
+plot(s4_4);grid on;
+figure;
+plot(s5_1);grid on;
+figure;
+plot(s5_2);grid on;
+figure;
+plot(s5_3);grid on;
+figure;
+plot(s5_4);grid on;
+figure;
+plot(s6_1);grid on;
+figure;
+plot(s6_2);grid on;
+figure;
+plot(s6_3);grid on;
+figure;
+plot(s6_4);grid on;
+figure;
+plot(s7_1);grid on;
+figure;
+plot(s7_2);grid on;
+figure;
+plot(s7_3);grid on;
+figure;
+plot(s7_4);grid on;
+figure;
+plot(s8_1);grid on;
+figure;
+plot(s8_2);grid on;
+figure;
+plot(s8_3);grid on;
+figure;
+plot(s8_4);grid on;
+figure;
+plot(s9_1);grid on;
+figure;
+plot(s9_2);grid on;
+figure;
+plot(s9_3);grid on;
+figure;
+plot(s9_4);grid on;
+
+
+希尔波特变换，提取包络。
+y = hilbert(f0_1l);
+env = abs(y); 
+plot(f0_1l);
+hold on
+plot(env,'r','LineWidth',2);
+
+
+读取文件。
+fileID = fopen('name');
+data = fread('fileID','short');
+plot(data);
+
+
+
+sm0_1l = smooth();
+
+
+ plot(f0_1l);
+ hold on
+ [upper1,lower1] = envelope(f0_1l);
+ plot(upper1,'k','LineWidth',1);
+ plot(lower1,'k','LineWidth',1)
+ upper2 = envelope(upper1);
+ lower2 = envelope(lower1);
+ plot(upper2,'r','LineWidth',1);
+ plot(lower2,'r','LineWidth',1);
+ upper3 = envelope(upper2);
+ lower3 = envelope(lower2);
+ plot(upper3,'g','LineWidth',1);
+ plot(lower3,'g','LineWidth',1);
+ upper4 = envelope(upper3);
+ lower4 = envelope(lower3);
+ plot(upper4,'y','LineWidth',1);
+ plot(lower4,'y','LineWidth',1);
+ upper5 = envelope(upper4);
+ lower5 = envelope(lower4);
+ plot(upper5,'b','LineWidth',1);
+ plot(lower5,'b','LineWidth',1);
+ upper6 = envelope(upper5);
+ lower6 = envelope(lower5);
+ plot(upper6,'k','LineWidth',1);
+ plot(lower6,'k','LineWidth',1);
+ upper7 = envelope(upper6);
+ lower7 = envelope(lower6);
+ plot(upper7,'r','LineWidth',1);
+ plot(lower7,'r','LineWidth',1);
+ legend('first','second','third','fourth','five','six','seven','eight');
+ figure;
+ plot(upper7);
+hold on
+ plot(lower7);
+
+
+ plot(f0_1l,'b','LineWidth',1);
+ [upper1,lower1] = envelope(f0_1l);
+ lower1= -lower1;
+ upper2 = envelope(upper1);
+ lower2 = envelope(lower1);
+ upper3 = envelope(upper2);
+ lower3 = envelope(lower2);
+ upper4 = envelope(upper3);
+ lower4 = envelope(lower3);
+ upper5 = envelope(upper4);
+ lower5 = envelope(lower4);
+ upper0_6l = envelope(upper5);
+ lower0_6l = envelope(lower5);
+ upper0_7l = envelope(upper0_6l);
+ lower0_7l = envelope(lower0_6l);
+ hold on
+ plot(upper1,'r','LineWidth',1);
+ plot(upper2,'y','LineWidth',1);
+ plot(upper3,'g','LineWidth',2);
+ plot(upper4,'m','LineWidth',1);
+ plot(upper5,'c','LineWidth',1);
+ plot(upper0_6l,'b','LineWidth',1);
+ plot(upper0_7l,'k','LineWidth',2);
+ legend('ori','1th','2th','3th','4th','5th','6th','7th');
+ plot(-lower1,'r','LineWidth',1);
+ plot(-lower2,'y','LineWidth',1);
+ plot(-lower3,'g','LineWidth',2);
+ plot(-lower4,'m','LineWidth',1);
+ plot(-lower5,'c','LineWidth',1);
+ plot(-lower0_6l,'b','LineWidth',1);
+ plot(-lower0_7l,'k','LineWidth',2);
+ %legend([p1:p7],'env1','env2','env3','env4','env5','env6','env7');
+ figure;
+ %upper8 = envelope(upper7);
+ %lower8 = envelope(lower7);
+ plot(upper0_7l,'LineWidth',2);
+ hold on
+ plot(-lower0_7l,'LineWidth',2);
+
+plot(f1_2l,'b','LineWidth',1);
+ [upper1,lower1] = envelope(f1_2l);
+ lower1= -lower1;
+ upper2 = envelope(upper1);
+ lower2 = envelope(lower1);
+ upper3 = envelope(upper2);
+ lower3 = envelope(lower2);
+ upper4 = envelope(upper3);
+ lower4 = envelope(lower3);
+ upper5 = envelope(upper4);
+ lower5 = envelope(lower4);
+ upper1_6l = envelope(upper5);
+ lower1_6l = envelope(lower5);
+ upper1_7l = envelope(upper1_6l);
+ lower1_7l = envelope(lower1_6l);
+ hold on
+ plot(upper1,'r','LineWidth',1);
+ plot(upper2,'y','LineWidth',1);
+ plot(upper3,'g','LineWidth',2);
+ plot(upper4,'m','LineWidth',1);
+ plot(upper5,'c','LineWidth',1);
+ plot(upper1_6l,'b','LineWidth',1);
+ plot(upper1_7l,'k','LineWidth',2);
+ legend('ori','1th','2th','3th','4th','5th','6th','7th');
+ plot(-lower1,'r','LineWidth',1);
+ plot(-lower2,'y','LineWidth',1);
+ plot(-lower3,'g','LineWidth',2);
+ plot(-lower4,'m','LineWidth',1);
+ plot(-lower5,'c','LineWidth',1);
+ plot(-lower1_6l,'b','LineWidth',1);
+ plot(-lower1_7l,'k','LineWidth',2);
+ %legend([p1:p7],'env1','env2','env3','env4','env5','env6','env7');
+ figure;
+ %upper8 = envelope(upper7);
+ %lower8 = envelope(lower7);
+ plot(upper1_7l,'LineWidth',2);
+ hold on
+ plot(-lower1_7l,'LineWidth',2);
+
+
+plot(f2_1l,'b','LineWidth',1);
+ [upper1,lower1] = envelope(f2_1l);
+ lower1= -lower1;
+ upper2 = envelope(upper1);
+ lower2 = envelope(lower1);
+ upper3 = envelope(upper2);
+ lower3 = envelope(lower2);
+ upper4 = envelope(upper3);
+ lower4 = envelope(lower3);
+ upper5 = envelope(upper4);
+ lower5 = envelope(lower4);
+ upper2_6l = envelope(upper5);
+ lower2_6l = envelope(lower5);
+ upper2_7l = envelope(upper2_6l);
+ lower2_7l = envelope(lower2_6l);
+ hold on
+ plot(upper1,'r','LineWidth',1);
+ plot(upper2,'y','LineWidth',1);
+ plot(upper3,'g','LineWidth',2);
+ plot(upper4,'m','LineWidth',1);
+ plot(upper5,'c','LineWidth',1);
+ plot(upper2_6l,'b','LineWidth',1);
+ plot(upper2_7l,'k','LineWidth',2);
+ legend('ori','1th','2th','3th','4th','5th','6th','7th');
+ plot(-lower1,'r','LineWidth',1);
+ plot(-lower2,'y','LineWidth',1);
+ plot(-lower3,'g','LineWidth',2);
+ plot(-lower4,'m','LineWidth',1);
+ plot(-lower5,'c','LineWidth',1);
+ plot(-lower2_6l,'b','LineWidth',1);
+ plot(-lower2_7l,'k','LineWidth',2);
+ %legend([p1:p7],'env1','env2','env3','env4','env5','env6','env7');
+ figure;
+ %upper8 = envelope(upper7);
+ %lower8 = envelope(lower7);
+ plot(upper2_7l,'LineWidth',2);
+ hold on
+ plot(-lower2_7l,'LineWidth',2);
+
+
+plot(f3_1l,'b','LineWidth',1);
+ [upper1,lower1] = envelope(f3_1l);
+ lower1= -lower1;
+ upper2 = envelope(upper1);
+ lower2 = envelope(lower1);
+ upper3 = envelope(upper2);
+ lower3 = envelope(lower2);
+ upper4 = envelope(upper3);
+ lower4 = envelope(lower3);
+ upper5 = envelope(upper4);
+ lower5 = envelope(lower4);
+ upper3_6l = envelope(upper5);
+ lower3_6l = envelope(lower5);
+ upper3_7l = envelope(upper3_6l);
+ lower3_7l = envelope(lower3_6l);
+ hold on
+ plot(upper1,'r','LineWidth',1);
+ plot(upper2,'y','LineWidth',1);
+ plot(upper3,'g','LineWidth',2);
+ plot(upper4,'m','LineWidth',1);
+ plot(upper5,'c','LineWidth',1);
+ plot(upper3_6l,'b','LineWidth',1);
+ plot(upper3_7l,'k','LineWidth',2);
+ legend('ori','1th','2th','3th','4th','5th','6th','7th');
+ plot(-lower1,'r','LineWidth',1);
+ plot(-lower2,'y','LineWidth',1);
+ plot(-lower3,'g','LineWidth',2);
+ plot(-lower4,'m','LineWidth',1);
+ plot(-lower5,'c','LineWidth',1);
+ plot(-lower3_6l,'b','LineWidth',1);
+ plot(-lower3_7l,'k','LineWidth',2);
+ %legend([p1:p7],'env1','env2','env3','env4','env5','env6','env7');
+ figure;
+ %upper8 = envelope(upper7);
+ %lower8 = envelope(lower7);
+ plot(upper3_7l,'LineWidth',2);
+ hold on
+ plot(-lower3_7l,'LineWidth',2);
+
+
+plot(f4_2l,'b','LineWidth',1);
+ [upper1,lower1] = envelope(f4_2l);
+ lower1= -lower1;
+ upper2 = envelope(upper1);
+ lower2 = envelope(lower1);
+ upper3 = envelope(upper2);
+ lower3 = envelope(lower2);
+ upper4 = envelope(upper3);
+ lower4 = envelope(lower3);
+ upper5 = envelope(upper4);
+ lower5 = envelope(lower4);
+ upper4_6l = envelope(upper5);
+ lower4_6l = envelope(lower5);
+ upper4_7l = envelope(upper4_6l);
+ lower4_7l = envelope(lower4_6l);
+ hold on
+ plot(upper1,'r','LineWidth',1);
+ plot(upper2,'y','LineWidth',1);
+ plot(upper3,'g','LineWidth',2);
+ plot(upper4,'m','LineWidth',1);
+ plot(upper5,'c','LineWidth',1);
+ plot(upper4_6l,'b','LineWidth',1);
+ plot(upper4_7l,'k','LineWidth',2);
+ legend('ori','1th','2th','3th','4th','5th','6th','7th');
+ plot(-lower1,'r','LineWidth',1);
+ plot(-lower2,'y','LineWidth',1);
+ plot(-lower3,'g','LineWidth',2);
+ plot(-lower4,'m','LineWidth',1);
+ plot(-lower5,'c','LineWidth',1);
+ plot(-lower4_6l,'b','LineWidth',1);
+ plot(-lower4_7l,'k','LineWidth',2);
+ %legend([p1:p7],'env1','env2','env3','env4','env5','env6','env7');
+ figure;
+ %upper8 = envelope(upper7);
+ %lower8 = envelope(lower7);
+ plot(upper4_7l,'LineWidth',2);
+ hold on
+ plot(-lower4_7l,'LineWidth',2);
+
+plot(f5_1l,'b','LineWidth',1);
+ [upper1,lower1] = envelope(f5_1l);
+ lower1= -lower1;
+ upper2 = envelope(upper1);
+ lower2 = envelope(lower1);
+ upper3 = envelope(upper2);
+ lower3 = envelope(lower2);
+ upper4 = envelope(upper3);
+ lower4 = envelope(lower3);
+ upper5 = envelope(upper4);
+ lower5 = envelope(lower4);
+ upper5_6l = envelope(upper5);
+ lower5_6l = envelope(lower5);
+ upper5_7l = envelope(upper5_6l);
+ lower5_7l = envelope(lower5_6l);
+ hold on
+ plot(upper1,'r','LineWidth',1);
+ plot(upper2,'y','LineWidth',1);
+ plot(upper3,'g','LineWidth',2);
+ plot(upper4,'m','LineWidth',1);
+ plot(upper5,'c','LineWidth',1);
+ plot(upper5_6l,'b','LineWidth',1);
+ plot(upper5_7l,'k','LineWidth',2);
+ legend('ori','1th','2th','3th','4th','5th','6th','7th');
+ plot(-lower1,'r','LineWidth',1);
+ plot(-lower2,'y','LineWidth',1);
+ plot(-lower3,'g','LineWidth',2);
+ plot(-lower4,'m','LineWidth',1);
+ plot(-lower5,'c','LineWidth',1);
+ plot(-lower5_6l,'b','LineWidth',1);
+ plot(-lower5_7l,'k','LineWidth',2);
+ %legend([p1:p7],'env1','env2','env3','env4','env5','env6','env7');
+ figure;
+ %upper8 = envelope(upper7);
+ %lower8 = envelope(lower7);
+ plot(upper5_7l,'LineWidth',2);
+ hold on
+ plot(-lower5_7l,'LineWidth',2);
+
+
+plot(f6_1l,'b','LineWidth',1);
+ [upper1,lower1] = envelope(f6_1l);
+ lower1= -lower1;
+ upper2 = envelope(upper1);
+ lower2 = envelope(lower1);
+ upper3 = envelope(upper2);
+ lower3 = envelope(lower2);
+ upper4 = envelope(upper3);
+ lower4 = envelope(lower3);
+ upper5 = envelope(upper4);
+ lower5 = envelope(lower4);
+ upper6_6l = envelope(upper5);
+ lower6_6l = envelope(lower5);
+ upper6_7l = envelope(upper6_6l);
+ lower6_7l = envelope(lower6_6l);
+ hold on
+ plot(upper1,'r','LineWidth',1);
+ plot(upper2,'y','LineWidth',1);
+ plot(upper3,'g','LineWidth',2);
+ plot(upper4,'m','LineWidth',1);
+ plot(upper5,'c','LineWidth',1);
+ plot(upper6_6l,'b','LineWidth',1);
+ plot(upper6_7l,'k','LineWidth',2);
+ legend('ori','1th','2th','3th','4th','5th','6th','7th');
+ plot(-lower1,'r','LineWidth',1);
+ plot(-lower2,'y','LineWidth',1);
+ plot(-lower3,'g','LineWidth',2);
+ plot(-lower4,'m','LineWidth',1);
+ plot(-lower5,'c','LineWidth',1);
+ plot(-lower6_6l,'b','LineWidth',1);
+ plot(-lower6_7l,'k','LineWidth',2);
+ %legend([p1:p7],'env1','env2','env3','env4','env5','env6','env7');
+ figure;
+ %upper8 = envelope(upper7);
+ %lower8 = envelope(lower7);
+ plot(upper6_7l,'LineWidth',2);
+ hold on
+ plot(-lower6_7l,'LineWidth',2);
+
+plot(f7_1l,'b','LineWidth',1);
+ [upper1,lower1] = envelope(f7_1l);
+ lower1= -lower1;
+ upper2 = envelope(upper1);
+ lower2 = envelope(lower1);
+ upper3 = envelope(upper2);
+ lower3 = envelope(lower2);
+ upper4 = envelope(upper3);
+ lower4 = envelope(lower3);
+ upper5 = envelope(upper4);
+ lower5 = envelope(lower4);
+ upper7_6l = envelope(upper5);
+ lower7_6l = envelope(lower5);
+ upper7_7l = envelope(upper7_6l);
+ lower7_7l = envelope(lower7_6l);
+ hold on
+ plot(upper1,'r','LineWidth',1);
+ plot(upper2,'y','LineWidth',1);
+ plot(upper3,'g','LineWidth',2);
+ plot(upper4,'m','LineWidth',1);
+ plot(upper5,'c','LineWidth',1);
+ plot(upper7_6l,'b','LineWidth',1);
+ plot(upper7_7l,'k','LineWidth',2);
+ legend('ori','1th','2th','3th','4th','5th','6th','7th');
+ plot(-lower1,'r','LineWidth',1);
+ plot(-lower2,'y','LineWidth',1);
+ plot(-lower3,'g','LineWidth',2);
+ plot(-lower4,'m','LineWidth',1);
+ plot(-lower5,'c','LineWidth',1);
+ plot(-lower7_6l,'b','LineWidth',1);
+ plot(-lower7_7l,'k','LineWidth',2);
+ %legend([p1:p7],'env1','env2','env3','env4','env5','env6','env7');
+ figure;
+ %upper8 = envelope(upper7);
+ %lower8 = envelope(lower7);
+ plot(upper7_7l,'LineWidth',2);
+ hold on
+ plot(-lower7_7l,'LineWidth',2);
+
+plot(f8_1l,'b','LineWidth',1);
+ [upper1,lower1] = envelope(f8_1l);
+ lower1= -lower1;
+ upper2 = envelope(upper1);
+ lower2 = envelope(lower1);
+ upper3 = envelope(upper2);
+ lower3 = envelope(lower2);
+ upper4 = envelope(upper3);
+ lower4 = envelope(lower3);
+ upper5 = envelope(upper4);
+ lower5 = envelope(lower4);
+ upper8_6l = envelope(upper5);
+ lower8_6l = envelope(lower5);
+ upper8_7l = envelope(upper8_6l);
+ lower8_7l = envelope(lower8_6l);
+ hold on
+ plot(upper1,'r','LineWidth',1);
+ plot(upper2,'y','LineWidth',1);
+ plot(upper3,'g','LineWidth',2);
+ plot(upper4,'m','LineWidth',1);
+ plot(upper5,'c','LineWidth',1);
+ plot(upper8_6l,'b','LineWidth',1);
+ plot(upper8_7l,'k','LineWidth',2);
+ legend('ori','1th','2th','3th','4th','5th','6th','7th');
+ plot(-lower1,'r','LineWidth',1);
+ plot(-lower2,'y','LineWidth',1);
+ plot(-lower3,'g','LineWidth',2);
+ plot(-lower4,'m','LineWidth',1);
+ plot(-lower5,'c','LineWidth',1);
+ plot(-lower8_6l,'b','LineWidth',1);
+ plot(-lower8_7l,'k','LineWidth',2);
+ %legend([p1:p7],'env1','env2','env3','env4','env5','env6','env7');
+ figure;
+ %upper8 = envelope(upper7);
+ %lower8 = envelope(lower7);
+ plot(upper8_7l,'LineWidth',2);
+ hold on
+ plot(-lower8_7l,'LineWidth',2);
+
+
+
+plot(f9_1l,'b','LineWidth',1);
+ [upper1,lower1] = envelope(f9_1l);
+ lower1= -lower1;
+ upper2 = envelope(upper1);
+ lower2 = envelope(lower1);
+ upper3 = envelope(upper2);
+ lower3 = envelope(lower2);
+ upper4 = envelope(upper3);
+ lower4 = envelope(lower3);
+ upper5 = envelope(upper4);
+ lower5 = envelope(lower4);
+ upper9_6l = envelope(upper5);
+ lower9_6l = envelope(lower5);
+ upper9_7l = envelope(upper9_6l);
+ lower9_7l = envelope(lower9_6l);
+ hold on
+ plot(upper1,'r','LineWidth',1);
+ plot(upper2,'y','LineWidth',1);
+ plot(upper3,'g','LineWidth',2);
+ plot(upper4,'m','LineWidth',1);
+ plot(upper5,'c','LineWidth',1);
+ plot(upper9_6l,'b','LineWidth',1);
+ plot(upper9_7l,'k','LineWidth',2);
+ legend('ori','1th','2th','3th','4th','5th','6th','7th');
+ plot(-lower1,'r','LineWidth',1);
+ plot(-lower2,'y','LineWidth',1);
+ plot(-lower3,'g','LineWidth',2);
+ plot(-lower4,'m','LineWidth',1);
+ plot(-lower5,'c','LineWidth',1);
+ plot(-lower9_6l,'b','LineWidth',1);
+ plot(-lower9_7l,'k','LineWidth',2);
+ %legend([p1:p7],'env1','env2','env3','env4','env5','env6','env7');
+ figure;
+ %upper8 = envelope(upper7);
+ %lower8 = envelope(lower7);
+ plot(upper9_7l,'LineWidth',2);
+ hold on
+ plot(-lower9_7l,'LineWidth',2);
+
+
+
+plot(upper0_6l,'b','LineWidth',2);
+grid on
+hold on
+plot(upper1_6l,'g','LineWidth',2);
+plot(upper2_6l,'y','LineWidth',2);
+plot(upper3_6l,'r','LineWidth',2);
+plot(upper4_6l,'m','LineWidth',2);
+plot(upper5_6l,'c','LineWidth',2);
+plot(upper6_6l,'g--o','LineWidth',2);
+plot(upper7_6l,'y--o','LineWidth',2);
+plot(upper8_6l,'r--*','LineWidth',2);
+plot(upper9_6l,'k','LineWidth',2);
+legend('0','1','2','3','4','5','6','7','8','9');
+
+
+plot(upper0_7l);
+grid on
+hold on
+plot(upper1_7l);
+plot(upper2_7l);
+plot(upper3_7l);
+plot(upper4_7l);
+plot(upper5_7l);
+plot(upper6_7l);
+plot(upper7_7l);
+plot(upper8_7l);
+plot(upper9_7l);
+
+rms0_1l = rmsEnvelope(f0_1l);
+rms0_2l = rmsEnvelope(f0_2l);
+rms0_3l = rmsEnvelope(f0_3l);
+rms1_1l = rmsEnvelope(f1_1l);
+rms1_2l = rmsEnvelope(f1_2l);
+rms1_3l = rmsEnvelope(f1_3l);
+rms2_1l = rmsEnvelope(f2_1l);
+rms2_2l = rmsEnvelope(f2_2l);
+rms2_3l = rmsEnvelope(f2_3l);
+rms3_1l = rmsEnvelope(f3_1l);
+rms3_2l = rmsEnvelope(f3_2l);
+rms3_3l = rmsEnvelope(f3_3l);
+rms4_1l = rmsEnvelope(f4_1l);
+rms4_2l = rmsEnvelope(f4_2l);
+rms4_3l = rmsEnvelope(f4_3l);
+rms5_1l = rmsEnvelope(f5_1l);
+rms5_2l = rmsEnvelope(f5_2l);
+rms5_3l = rmsEnvelope(f5_3l);
+rms6_1l = rmsEnvelope(f6_1l);
+rms6_2l = rmsEnvelope(f6_2l);
+rms6_3l = rmsEnvelope(f6_3l);
+rms7_1l = rmsEnvelope(f7_1l);
+rms7_2l = rmsEnvelope(f7_2l);
+rms7_3l = rmsEnvelope(f7_3l);
+rms8_1l = rmsEnvelope(f8_1l);
+rms8_2l = rmsEnvelope(f8_2l);
+rms8_3l = rmsEnvelope(f8_3l);
+rms9_1l = rmsEnvelope(f9_1l);
+rms9_2l = rmsEnvelope(f9_2l);
+rms9_3l = rmsEnvelope(f9_3l);
+
+
+rms0_1r = rmsEnvelope(f0_1r);
+rms0_2r = rmsEnvelope(f0_2r);
+rms0_3r = rmsEnvelope(f0_3r);
+rms1_1r = rmsEnvelope(f1_1r);
+rms1_2r = rmsEnvelope(f1_2r);
+rms1_3r = rmsEnvelope(f1_3r);
+rms2_1r = rmsEnvelope(f2_1r);
+rms2_2r = rmsEnvelope(f2_2r);
+rms2_3r = rmsEnvelope(f2_3r);
+rms3_1r = rmsEnvelope(f3_1r);
+rms3_2r = rmsEnvelope(f3_2r);
+rms3_3r = rmsEnvelope(f3_3r);
+rms4_1r = rmsEnvelope(f4_1r);
+rms4_2r = rmsEnvelope(f4_2r);
+rms4_3r = rmsEnvelope(f4_3r);
+rms5_1r = rmsEnvelope(f5_1r);
+rms5_2r = rmsEnvelope(f5_2r);
+rms5_3r = rmsEnvelope(f5_3r);
+rms6_1r = rmsEnvelope(f6_1r);
+rms6_2r = rmsEnvelope(f6_2r);
+rms6_3r = rmsEnvelope(f6_3r);
+rms7_1r = rmsEnvelope(f7_1r);
+rms7_2r = rmsEnvelope(f7_2r);
+rms7_3r = rmsEnvelope(f7_3r);
+rms8_1r = rmsEnvelope(f8_1r);
+rms8_2r = rmsEnvelope(f8_2r);
+rms8_3r = rmsEnvelope(f8_3r);
+rms9_1r = rmsEnvelope(f9_1r);
+rms9_2r = rmsEnvelope(f9_2r);
+rms9_3r = rmsEnvelope(f9_3r);
+
+
+p=1.2
+amr0_1l = AMR(p,f0_1l);
+amr0_2l = AMR(p,f0_2l);
+amr0_3l = AMR(p,f0_3l);
+amr1_1l = AMR(p,f1_1l);
+amr1_2l = AMR(p,f1_2l);
+amr1_3l = AMR(p,f1_3l);
+amr2_1l = AMR(p,f2_1l);
+amr2_2l = AMR(p,f2_2l);
+amr2_3l = AMR(p,f2_3l);
+amr3_1l = AMR(p,f3_1l);
+amr3_2l = AMR(p,f3_2l);
+amr3_3l = AMR(p,f3_3l);
+amr4_1l = AMR(p,f4_1l);
+amr4_2l = AMR(p,f4_2l);
+amr4_3l = AMR(p,f4_3l);
+amr5_1l = AMR(p,f5_1l);
+amr5_2l = AMR(p,f5_2l);
+amr5_3l = AMR(p,f5_3l);
+amr6_1l = AMR(p,f6_1l);
+amr6_2l = AMR(p,f6_2l);
+amr6_3l = AMR(p,f6_3l);
+amr7_1l = AMR(p,f7_1l);
+amr7_2l = AMR(p,f7_2l);
+amr7_3l = AMR(p,f7_3l);
+amr8_1l = AMR(p,f8_1l);
+amr8_2l = AMR(p,f8_2l);
+amr8_3l = AMR(p,f8_3l);
+amr9_1l = AMR(p,f9_1l);
+amr9_2l = AMR(p,f9_2l);
+amr9_3l = AMR(p,f9_3l);
+
+amr0_1r = AMR(p,f0_1r);
+amr0_2r = AMR(p,f0_2r);
+amr0_3r = AMR(p,f0_3r);
+amr1_1r = AMR(p,f1_1r);
+amr1_2r = AMR(p,f1_2r);
+amr1_3r = AMR(p,f1_3r);
+amr2_1r = AMR(p,f2_1r);
+amr2_2r = AMR(p,f2_2r);
+amr2_3r = AMR(p,f2_3r);
+amr3_1r = AMR(p,f3_1r);
+amr3_2r = AMR(p,f3_2r);
+amr3_3r = AMR(p,f3_3r);
+amr4_1r = AMR(p,f4_1r);
+amr4_2r = AMR(p,f4_2r);
+amr4_3r = AMR(p,f4_3r);
+amr5_1r = AMR(p,f5_1r);
+amr5_2r = AMR(p,f5_2r);
+amr5_3r = AMR(p,f5_3r);
+amr6_1r = AMR(p,f6_1r);
+amr6_2r = AMR(p,f6_2r);
+amr6_3r = AMR(p,f6_3r);
+amr7_1r = AMR(p,f7_1r);
+amr7_2r = AMR(p,f7_2r);
+amr7_3r = AMR(p,f7_3r);
+amr8_1r = AMR(p,f8_1r);
+amr8_2r = AMR(p,f8_2r);
+amr8_3r = AMR(p,f8_3r);
+amr9_1r = AMR(p,f9_1r);
+amr9_2r = AMR(p,f9_2r);
+amr9_3r = AMR(p,f9_3r);
+
+
+tf=2;
+atr0_1l = ATR(tf,f0_1l);
+atr0_2l = ATR(tf,f0_2l);
+atr0_3l = ATR(tf,f0_3l);
+atr1_1l = ATR(tf,f1_1l);
+atr1_2l = ATR(tf,f1_2l);
+atr1_3l = ATR(tf,f1_3l);
+atr2_1l = ATR(tf,f2_1l);
+atr2_2l = ATR(tf,f2_2l);
+atr2_3l = ATR(tf,f2_3l);
+atr3_1l = ATR(tf,f3_1l);
+atr3_2l = ATR(tf,f3_2l);
+atr3_3l = ATR(tf,f3_3l);
+atr4_1l = ATR(tf,f4_1l);
+atr4_2l = ATR(tf,f4_2l);
+atr4_3l = ATR(tf,f4_3l);
+atr5_1l = ATR(tf,f5_1l);
+atr5_2l = ATR(tf,f5_2l);
+atr5_3l = ATR(tf,f5_3l);
+atr6_1l = ATR(tf,f6_1l);
+atr6_2l = ATR(tf,f6_2l);
+atr6_3l = ATR(tf,f6_3l);
+atr7_1l = ATR(tf,f7_1l);
+atr7_2l = ATR(tf,f7_2l);
+atr7_3l = ATR(tf,f7_3l);
+atr8_1l = ATR(tf,f8_1l);
+atr8_2l = ATR(tf,f8_2l);
+atr8_3l = ATR(tf,f8_3l);
+atr9_1l = ATR(tf,f9_1l);
+atr9_2l = ATR(tf,f9_2l);
+atr9_3l = ATR(tf,f9_3l);
+
+atr0_1r = ATR(tf,f0_1r);
+atr0_2r = ATR(tf,f0_2r);
+atr0_3r = ATR(tf,f0_3r);
+atr1_1r = ATR(tf,f1_1r);
+atr1_2r = ATR(tf,f1_2r);
+atr1_3r = ATR(tf,f1_3r);
+atr2_1r = ATR(tf,f2_1r);
+atr2_2r = ATR(tf,f2_2r);
+atr2_3r = ATR(tf,f2_3r);
+atr3_1r = ATR(tf,f3_1r);
+atr3_2r = ATR(tf,f3_2r);
+atr3_3r = ATR(tf,f3_3r);
+atr4_1r = ATR(tf,f4_1r);
+atr4_2r = ATR(tf,f4_2r);
+atr4_3r = ATR(tf,f4_3r);
+atr5_1r = ATR(tf,f5_1r);
+atr5_2r = ATR(tf,f5_2r);
+atr5_3r = ATR(tf,f5_3r);
+atr6_1r = ATR(tf,f6_1r);
+atr6_2r = ATR(tf,f6_2r);
+atr6_3r = ATR(tf,f6_3r);
+atr7_1r = ATR(tf,f7_1r);
+atr7_2r = ATR(tf,f7_2r);
+atr7_3r = ATR(tf,f7_3r);
+atr8_1r = ATR(tf,f8_1r);
+atr8_2r = ATR(tf,f8_2r);
+atr8_3r = ATR(tf,f8_3r);
+atr9_1r = ATR(tf,f9_1r);
+atr9_2r = ATR(tf,f9_2r);
+atr9_3r = ATR(tf,f9_3r);
+
+
+zcr0_1l = zcr(f0_1l);
+zcr0_2l = zcr(f0_2l);
+zcr0_3l = zcr(f0_3l);
+zcr1_1l = zcr(f1_1l);
+zcr1_2l = zcr(f1_2l);
+zcr1_3l = zcr(f1_3l);
+zcr2_1l = zcr(f2_1l);
+zcr2_2l = zcr(f2_2l);
+zcr2_3l = zcr(f2_3l);
+zcr3_1l = zcr(f3_1l);
+zcr3_2l = zcr(f3_2l);
+zcr3_3l = zcr(f3_3l);
+zcr4_1l = zcr(f4_1l);
+zcr4_2l = zcr(f4_2l);
+zcr4_3l = zcr(f4_3l);
+zcr5_1l = zcr(f5_1l);
+zcr5_2l = zcr(f5_2l);
+zcr5_3l = zcr(f5_3l);
+zcr6_1l = zcr(f6_1l);
+zcr6_2l = zcr(f6_2l);
+zcr6_3l = zcr(f6_3l);
+zcr7_1l = zcr(f7_1l);
+zcr7_2l = zcr(f7_2l);
+zcr7_3l = zcr(f7_3l);
+zcr8_1l = zcr(f8_1l);
+zcr8_2l = zcr(f8_2l);
+zcr8_3l = zcr(f8_3l);
+zcr9_1l = zcr(f9_1l);
+zcr9_2l = zcr(f9_2l);
+zcr9_3l = zcr(f9_3l);
+
+zcr0_1r = zcr(f0_1r);
+zcr0_2r = zcr(f0_2r);
+zcr0_3r = zcr(f0_3r);
+zcr1_1r = zcr(f1_1r);
+zcr1_2r = zcr(f1_2r);
+zcr1_3r = zcr(f1_3r);
+zcr2_1r = zcr(f2_1r);
+zcr2_2r = zcr(f2_2r);
+zcr2_3r = zcr(f2_3r);
+zcr3_1r = zcr(f3_1r);
+zcr3_2r = zcr(f3_2r);
+zcr3_3r = zcr(f3_3r);
+zcr4_1r = zcr(f4_1r);
+zcr4_2r = zcr(f4_2r);
+zcr4_3r = zcr(f4_3r);
+zcr5_1r = zcr(f5_1r);
+zcr5_2r = zcr(f5_2r);
+zcr5_3r = zcr(f5_3r);
+zcr6_1r = zcr(f6_1r);
+zcr6_2r = zcr(f6_2r);
+zcr6_3r = zcr(f6_3r);
+zcr7_1r = zcr(f7_1r);
+zcr7_2r = zcr(f7_2r);
+zcr7_3r = zcr(f7_3r);
+zcr8_1r = zcr(f8_1r);
+zcr8_2r = zcr(f8_2r);
+zcr8_3r = zcr(f8_3r);
+zcr9_1r = zcr(f9_1r);
+zcr9_2r = zcr(f9_2r);
+zcr9_3r = zcr(f9_3r);
+
+
+
+winSize=1500;
+winStep=750;
+fs=58000;
+SpeC0_1l = SpectralCentroid(f0_1l,winSize,winStep,fs);
+SpeC0_2l = SpectralCentroid(f0_2l,winSize,winStep,fs);
+SpeC0_3l = SpectralCentroid(f0_3l,winSize,winStep,fs);
+SpeC1_1l = SpectralCentroid(f1_1l,winSize,winStep,fs);
+SpeC1_2l = SpectralCentroid(f1_2l,winSize,winStep,fs);
+SpeC1_3l = SpectralCentroid(f1_3l,winSize,winStep,fs);
+SpeC2_1l = SpectralCentroid(f2_1l,winSize,winStep,fs);
+SpeC2_2l = SpectralCentroid(f2_2l,winSize,winStep,fs);
+SpeC2_3l = SpectralCentroid(f2_3l,winSize,winStep,fs);
+SpeC3_1l = SpectralCentroid(f3_1l,winSize,winStep,fs);
+SpeC3_2l = SpectralCentroid(f3_2l,winSize,winStep,fs);
+SpeC3_3l = SpectralCentroid(f3_3l,winSize,winStep,fs);
+SpeC4_1l = SpectralCentroid(f4_1l,winSize,winStep,fs);
+SpeC4_2l = SpectralCentroid(f4_2l,winSize,winStep,fs);
+SpeC4_3l = SpectralCentroid(f4_3l,winSize,winStep,fs);
+SpeC5_1l = SpectralCentroid(f5_1l,winSize,winStep,fs);
+SpeC5_2l = SpectralCentroid(f5_2l,winSize,winStep,fs);
+SpeC5_3l = SpectralCentroid(f5_3l,winSize,winStep,fs);
+SpeC6_1l = SpectralCentroid(f6_1l,winSize,winStep,fs);
+SpeC6_2l = SpectralCentroid(f6_2l,winSize,winStep,fs);
+SpeC6_3l = SpectralCentroid(f6_3l,winSize,winStep,fs);
+SpeC7_1l = SpectralCentroid(f7_1l,winSize,winStep,fs);
+SpeC7_2l = SpectralCentroid(f7_2l,winSize,winStep,fs);
+SpeC7_3l = SpectralCentroid(f7_3l,winSize,winStep,fs);
+SpeC8_1l = SpectralCentroid(f8_1l,winSize,winStep,fs);
+SpeC8_2l = SpectralCentroid(f8_2l,winSize,winStep,fs);
+SpeC8_3l = SpectralCentroid(f8_3l,winSize,winStep,fs);
+SpeC9_1l = SpectralCentroid(f9_1l,winSize,winStep,fs);
+SpeC9_2l = SpectralCentroid(f9_2l,winSize,winStep,fs);
+SpeC9_3l = SpectralCentroid(f9_3l,winSize,winStep,fs);
+
+SpeC0_1r = SpectralCentroid(f0_1r,winSize,winStep,fs);
+SpeC0_2r = SpectralCentroid(f0_2r,winSize,winStep,fs);
+SpeC0_3r = SpectralCentroid(f0_3r,winSize,winStep,fs);
+SpeC1_1r = SpectralCentroid(f1_1r,winSize,winStep,fs);
+SpeC1_2r = SpectralCentroid(f1_2r,winSize,winStep,fs);
+SpeC1_3r = SpectralCentroid(f1_3r,winSize,winStep,fs);
+SpeC2_1r = SpectralCentroid(f2_1r,winSize,winStep,fs);
+SpeC2_2r = SpectralCentroid(f2_2r,winSize,winStep,fs);
+SpeC2_3r = SpectralCentroid(f2_3r,winSize,winStep,fs);
+SpeC3_1r = SpectralCentroid(f3_1r,winSize,winStep,fs);
+SpeC3_2r = SpectralCentroid(f3_2r,winSize,winStep,fs);
+SpeC3_3r = SpectralCentroid(f3_3r,winSize,winStep,fs);
+SpeC4_1r = SpectralCentroid(f4_1r,winSize,winStep,fs);
+SpeC4_2r = SpectralCentroid(f4_2r,winSize,winStep,fs);
+SpeC4_3r = SpectralCentroid(f4_3r,winSize,winStep,fs);
+SpeC5_1r = SpectralCentroid(f5_1r,winSize,winStep,fs);
+SpeC5_2r = SpectralCentroid(f5_2r,winSize,winStep,fs);
+SpeC5_3r = SpectralCentroid(f5_3r,winSize,winStep,fs);
+SpeC6_1r = SpectralCentroid(f6_1r,winSize,winStep,fs);
+SpeC6_2r = SpectralCentroid(f6_2r,winSize,winStep,fs);
+SpeC6_3r = SpectralCentroid(f6_3r,winSize,winStep,fs);
+SpeC7_1r = SpectralCentroid(f7_1r,winSize,winStep,fs);
+SpeC7_2r = SpectralCentroid(f7_2r,winSize,winStep,fs);
+SpeC7_3r = SpectralCentroid(f7_3r,winSize,winStep,fs);
+SpeC8_1r = SpectralCentroid(f8_1r,winSize,winStep,fs);
+SpeC8_2r = SpectralCentroid(f8_2r,winSize,winStep,fs);
+SpeC8_3r = SpectralCentroid(f8_3r,winSize,winStep,fs);
+SpeC9_1r = SpectralCentroid(f9_1r,winSize,winStep,fs);
+SpeC9_2r = SpectralCentroid(f9_2r,winSize,winStep,fs);
+SpeC9_3r = SpectralCentroid(f9_3r,winSize,winStep,fs);
+
+
+winSize=1500;
+winStep=750;
+fftLength=1500;
+numOfBins=1500;
+
+SpeE0_1l = SpectralEntropy(f0_1l,winSize,winStep,fftLength,numOfBins);
+SpeE0_2l = SpectralEntropy(f0_2l,winSize,winStep,fftLength,numOfBins);
+SpeE0_3l = SpectralEntropy(f0_3l,winSize,winStep,fftLength,numOfBins);
+SpeE1_1l = SpectralEntropy(f1_1l,winSize,winStep,fftLength,numOfBins);
+SpeE1_2l = SpectralEntropy(f1_2l,winSize,winStep,fftLength,numOfBins);
+SpeE1_3l = SpectralEntropy(f1_3l,winSize,winStep,fftLength,numOfBins);
+SpeE2_1l = SpectralEntropy(f2_1l,winSize,winStep,fftLength,numOfBins);
+SpeE2_2l = SpectralEntropy(f2_2l,winSize,winStep,fftLength,numOfBins);
+SpeE2_3l = SpectralEntropy(f2_3l,winSize,winStep,fftLength,numOfBins);
+SpeE3_1l = SpectralEntropy(f3_1l,winSize,winStep,fftLength,numOfBins);
+SpeE3_2l = SpectralEntropy(f3_2l,winSize,winStep,fftLength,numOfBins);
+SpeE3_3l = SpectralEntropy(f3_3l,winSize,winStep,fftLength,numOfBins);
+SpeE4_1l = SpectralEntropy(f4_1l,winSize,winStep,fftLength,numOfBins);
+SpeE4_2l = SpectralEntropy(f4_2l,winSize,winStep,fftLength,numOfBins);
+SpeE4_3l = SpectralEntropy(f4_3l,winSize,winStep,fftLength,numOfBins);
+SpeE5_1l = SpectralEntropy(f5_1l,winSize,winStep,fftLength,numOfBins);
+SpeE5_2l = SpectralEntropy(f5_2l,winSize,winStep,fftLength,numOfBins);
+SpeE5_3l = SpectralEntropy(f5_3l,winSize,winStep,fftLength,numOfBins);
+SpeE6_1l = SpectralEntropy(f6_1l,winSize,winStep,fftLength,numOfBins);
+SpeE6_2l = SpectralEntropy(f6_2l,winSize,winStep,fftLength,numOfBins);
+SpeE6_3l = SpectralEntropy(f6_3l,winSize,winStep,fftLength,numOfBins);
+SpeE7_1l = SpectralEntropy(f7_1l,winSize,winStep,fftLength,numOfBins);
+SpeE7_2l = SpectralEntropy(f7_2l,winSize,winStep,fftLength,numOfBins);
+SpeE7_3l = SpectralEntropy(f7_3l,winSize,winStep,fftLength,numOfBins);
+SpeE8_1l = SpectralEntropy(f8_1l,winSize,winStep,fftLength,numOfBins);
+SpeE8_2l = SpectralEntropy(f8_2l,winSize,winStep,fftLength,numOfBins);
+SpeE8_3l = SpectralEntropy(f8_3l,winSize,winStep,fftLength,numOfBins);
+SpeE9_1l = SpectralEntropy(f9_1l,winSize,winStep,fftLength,numOfBins);
+SpeE9_2l = SpectralEntropy(f9_2l,winSize,winStep,fftLength,numOfBins);
+SpeE9_3l = SpectralEntropy(f9_3l,winSize,winStep,fftLength,numOfBins);
+
+SpeE0_1r = SpectralEntropy(f0_1r,winSize,winStep,fftLength,numOfBins);
+SpeE0_2r = SpectralEntropy(f0_2r,winSize,winStep,fftLength,numOfBins);
+SpeE0_3r = SpectralEntropy(f0_3r,winSize,winStep,fftLength,numOfBins);
+SpeE1_1r = SpectralEntropy(f1_1r,winSize,winStep,fftLength,numOfBins);
+SpeE1_2r = SpectralEntropy(f1_2r,winSize,winStep,fftLength,numOfBins);
+SpeE1_3r = SpectralEntropy(f1_3r,winSize,winStep,fftLength,numOfBins);
+SpeE2_1r = SpectralEntropy(f2_1r,winSize,winStep,fftLength,numOfBins);
+SpeE2_2r = SpectralEntropy(f2_2r,winSize,winStep,fftLength,numOfBins);
+SpeE2_3r = SpectralEntropy(f2_3r,winSize,winStep,fftLength,numOfBins);
+SpeE3_1r = SpectralEntropy(f3_1r,winSize,winStep,fftLength,numOfBins);
+SpeE3_2r = SpectralEntropy(f3_2r,winSize,winStep,fftLength,numOfBins);
+SpeE3_3r = SpectralEntropy(f3_3r,winSize,winStep,fftLength,numOfBins);
+SpeE4_1r = SpectralEntropy(f4_1r,winSize,winStep,fftLength,numOfBins);
+SpeE4_2r = SpectralEntropy(f4_2r,winSize,winStep,fftLength,numOfBins);
+SpeE4_3r = SpectralEntropy(f4_3r,winSize,winStep,fftLength,numOfBins);
+SpeE5_1r = SpectralEntropy(f5_1r,winSize,winStep,fftLength,numOfBins);
+SpeE5_2r = SpectralEntropy(f5_2r,winSize,winStep,fftLength,numOfBins);
+SpeE5_3r = SpectralEntropy(f5_3r,winSize,winStep,fftLength,numOfBins);
+SpeE6_1r = SpectralEntropy(f6_1r,winSize,winStep,fftLength,numOfBins);
+SpeE6_2r = SpectralEntropy(f6_2r,winSize,winStep,fftLength,numOfBins);
+SpeE6_3r = SpectralEntropy(f6_3r,winSize,winStep,fftLength,numOfBins);
+SpeE7_1r = SpectralEntropy(f7_1r,winSize,winStep,fftLength,numOfBins);
+SpeE7_2r = SpectralEntropy(f7_2r,winSize,winStep,fftLength,numOfBins);
+SpeE7_3r = SpectralEntropy(f7_3r,winSize,winStep,fftLength,numOfBins);
+SpeE8_1r = SpectralEntropy(f8_1r,winSize,winStep,fftLength,numOfBins);
+SpeE8_2r = SpectralEntropy(f8_2r,winSize,winStep,fftLength,numOfBins);
+SpeE8_3r = SpectralEntropy(f8_3r,winSize,winStep,fftLength,numOfBins);
+SpeE9_1r = SpectralEntropy(f9_1r,winSize,winStep,fftLength,numOfBins);
+SpeE9_2r = SpectralEntropy(f9_2r,winSize,winStep,fftLength,numOfBins);
+SpeE9_3r = SpectralEntropy(f9_3r,winSize,winStep,fftLength,numOfBins);
+
+
+
+winSize=1500;
+winStep=750;
+fs=58000;
+
+SpeF0_1l = SpectralFlux(f0_1l,winSize,winStep,fs);
+SpeF0_2l = SpectralFlux(f0_2l,winSize,winStep,fs);
+SpeF0_3l = SpectralFlux(f0_3l,winSize,winStep,fs);
+SpeF1_1l = SpectralFlux(f1_1l,winSize,winStep,fs);
+SpeF1_2l = SpectralFlux(f1_2l,winSize,winStep,fs);
+SpeF1_3l = SpectralFlux(f1_3l,winSize,winStep,fs);
+SpeF2_1l = SpectralFlux(f2_1l,winSize,winStep,fs);
+SpeF2_2l = SpectralFlux(f2_2l,winSize,winStep,fs);
+SpeF2_3l = SpectralFlux(f2_3l,winSize,winStep,fs);
+SpeF3_1l = SpectralFlux(f3_1l,winSize,winStep,fs);
+SpeF3_2l = SpectralFlux(f3_2l,winSize,winStep,fs);
+SpeF3_3l = SpectralFlux(f3_3l,winSize,winStep,fs);
+SpeF4_1l = SpectralFlux(f4_1l,winSize,winStep,fs);
+SpeF4_2l = SpectralFlux(f4_2l,winSize,winStep,fs);
+SpeF4_3l = SpectralFlux(f4_3l,winSize,winStep,fs);
+SpeF5_1l = SpectralFlux(f5_1l,winSize,winStep,fs);
+SpeF5_2l = SpectralFlux(f5_2l,winSize,winStep,fs);
+SpeF5_3l = SpectralFlux(f5_3l,winSize,winStep,fs);
+SpeF6_1l = SpectralFlux(f6_1l,winSize,winStep,fs);
+SpeF6_2l = SpectralFlux(f6_2l,winSize,winStep,fs);
+SpeF6_3l = SpectralFlux(f6_3l,winSize,winStep,fs);
+SpeF7_1l = SpectralFlux(f7_1l,winSize,winStep,fs);
+SpeF7_2l = SpectralFlux(f7_2l,winSize,winStep,fs);
+SpeF7_3l = SpectralFlux(f7_3l,winSize,winStep,fs);
+SpeF8_1l = SpectralFlux(f8_1l,winSize,winStep,fs);
+SpeF8_2l = SpectralFlux(f8_2l,winSize,winStep,fs);
+SpeF8_3l = SpectralFlux(f8_3l,winSize,winStep,fs);
+SpeF9_1l = SpectralFlux(f9_1l,winSize,winStep,fs);
+SpeF9_2l = SpectralFlux(f9_2l,winSize,winStep,fs);
+SpeF9_3l = SpectralFlux(f9_3l,winSize,winStep,fs);
+
+SpeF0_1r = SpectralFlux(f0_1r,winSize,winStep,fs);
+SpeF0_2r = SpectralFlux(f0_2r,winSize,winStep,fs);
+SpeF0_3r = SpectralFlux(f0_3r,winSize,winStep,fs);
+SpeF1_1r = SpectralFlux(f1_1r,winSize,winStep,fs);
+SpeF1_2r = SpectralFlux(f1_2r,winSize,winStep,fs);
+SpeF1_3r = SpectralFlux(f1_3r,winSize,winStep,fs);
+SpeF2_1r = SpectralFlux(f2_1r,winSize,winStep,fs);
+SpeF2_2r = SpectralFlux(f2_2r,winSize,winStep,fs);
+SpeF2_3r = SpectralFlux(f2_3r,winSize,winStep,fs);
+SpeF3_1r = SpectralFlux(f3_1r,winSize,winStep,fs);
+SpeF3_2r = SpectralFlux(f3_2r,winSize,winStep,fs);
+SpeF3_3r = SpectralFlux(f3_3r,winSize,winStep,fs);
+SpeF4_1r = SpectralFlux(f4_1r,winSize,winStep,fs);
+SpeF4_2r = SpectralFlux(f4_2r,winSize,winStep,fs);
+SpeF4_3r = SpectralFlux(f4_3r,winSize,winStep,fs);
+SpeF5_1r = SpectralFlux(f5_1r,winSize,winStep,fs);
+SpeF5_2r = SpectralFlux(f5_2r,winSize,winStep,fs);
+SpeF5_3r = SpectralFlux(f5_3r,winSize,winStep,fs);
+SpeF6_1r = SpectralFlux(f6_1r,winSize,winStep,fs);
+SpeF6_2r = SpectralFlux(f6_2r,winSize,winStep,fs);
+SpeF6_3r = SpectralFlux(f6_3r,winSize,winStep,fs);
+SpeF7_1r = SpectralFlux(f7_1r,winSize,winStep,fs);
+SpeF7_2r = SpectralFlux(f7_2r,winSize,winStep,fs);
+SpeF7_3r = SpectralFlux(f7_3r,winSize,winStep,fs);
+SpeF8_1r = SpectralFlux(f8_1r,winSize,winStep,fs);
+SpeF8_2r = SpectralFlux(f8_2r,winSize,winStep,fs);
+SpeF8_3r = SpectralFlux(f8_3r,winSize,winStep,fs);
+SpeF9_1r = SpectralFlux(f9_1r,winSize,winStep,fs);
+SpeF9_2r = SpectralFlux(f9_2r,winSize,winStep,fs);
+SpeF9_3r = SpectralFlux(f9_3r,winSize,winStep,fs);
+
+
+
+winSize=1500;
+winStep=750;
+p=0.8;
+fs=58000;
+
+SpeR0_1l = SpectralRollOff(f0_1l,winSize,winStep,p,fs);
+SpeR0_2l = SpectralRollOff(f0_2l,winSize,winStep,p,fs);
+SpeR0_3l = SpectralRollOff(f0_3l,winSize,winStep,p,fs);
+SpeR1_1l = SpectralRollOff(f1_1l,winSize,winStep,p,fs);
+SpeR1_2l = SpectralRollOff(f1_2l,winSize,winStep,p,fs);
+SpeR1_3l = SpectralRollOff(f1_3l,winSize,winStep,p,fs);
+SpeR2_1l = SpectralRollOff(f2_1l,winSize,winStep,p,fs);
+SpeR2_2l = SpectralRollOff(f2_2l,winSize,winStep,p,fs);
+SpeR2_3l = SpectralRollOff(f2_3l,winSize,winStep,p,fs);
+SpeR3_1l = SpectralRollOff(f3_1l,winSize,winStep,p,fs);
+SpeR3_2l = SpectralRollOff(f3_2l,winSize,winStep,p,fs);
+SpeR3_3l = SpectralRollOff(f3_3l,winSize,winStep,p,fs);
+SpeR4_1l = SpectralRollOff(f4_1l,winSize,winStep,p,fs);
+SpeR4_2l = SpectralRollOff(f4_2l,winSize,winStep,p,fs);
+SpeR4_3l = SpectralRollOff(f4_3l,winSize,winStep,p,fs);
+SpeR5_1l = SpectralRollOff(f5_1l,winSize,winStep,p,fs);
+SpeR5_2l = SpectralRollOff(f5_2l,winSize,winStep,p,fs);
+SpeR5_3l = SpectralRollOff(f5_3l,winSize,winStep,p,fs);
+SpeR6_1l = SpectralRollOff(f6_1l,winSize,winStep,p,fs);
+SpeR6_2l = SpectralRollOff(f6_2l,winSize,winStep,p,fs);
+SpeR6_3l = SpectralRollOff(f6_3l,winSize,winStep,p,fs);
+SpeR7_1l = SpectralRollOff(f7_1l,winSize,winStep,p,fs);
+SpeR7_2l = SpectralRollOff(f7_2l,winSize,winStep,p,fs);
+SpeR7_3l = SpectralRollOff(f7_3l,winSize,winStep,p,fs);
+SpeR8_1l = SpectralRollOff(f8_1l,winSize,winStep,p,fs);
+SpeR8_2l = SpectralRollOff(f8_2l,winSize,winStep,p,fs);
+SpeR8_3l = SpectralRollOff(f8_3l,winSize,winStep,p,fs);
+SpeR9_1l = SpectralRollOff(f9_1l,winSize,winStep,p,fs);
+SpeR9_2l = SpectralRollOff(f9_2l,winSize,winStep,p,fs);
+SpeR9_3l = SpectralRollOff(f9_3l,winSize,winStep,p,fs);
+
+SpeR0_1r = SpectralRollOff(f0_1r,winSize,winStep,p,fs);
+SpeR0_2r = SpectralRollOff(f0_2r,winSize,winStep,p,fs);
+SpeR0_3r = SpectralRollOff(f0_3r,winSize,winStep,p,fs);
+SpeR1_1r = SpectralRollOff(f1_1r,winSize,winStep,p,fs);
+SpeR1_2r = SpectralRollOff(f1_2r,winSize,winStep,p,fs);
+SpeR1_3r = SpectralRollOff(f1_3r,winSize,winStep,p,fs);
+SpeR2_1r = SpectralRollOff(f2_1r,winSize,winStep,p,fs);
+SpeR2_2r = SpectralRollOff(f2_2r,winSize,winStep,p,fs);
+SpeR2_3r = SpectralRollOff(f2_3r,winSize,winStep,p,fs);
+SpeR3_1r = SpectralRollOff(f3_1r,winSize,winStep,p,fs);
+SpeR3_2r = SpectralRollOff(f3_2r,winSize,winStep,p,fs);
+SpeR3_3r = SpectralRollOff(f3_3r,winSize,winStep,p,fs);
+SpeR4_1r = SpectralRollOff(f4_1r,winSize,winStep,p,fs);
+SpeR4_2r = SpectralRollOff(f4_2r,winSize,winStep,p,fs);
+SpeR4_3r = SpectralRollOff(f4_3r,winSize,winStep,p,fs);
+SpeR5_1r = SpectralRollOff(f5_1r,winSize,winStep,p,fs);
+SpeR5_2r = SpectralRollOff(f5_2r,winSize,winStep,p,fs);
+SpeR5_3r = SpectralRollOff(f5_3r,winSize,winStep,p,fs);
+SpeR6_1r = SpectralRollOff(f6_1r,winSize,winStep,p,fs);
+SpeR6_2r = SpectralRollOff(f6_2r,winSize,winStep,p,fs);
+SpeR6_3r = SpectralRollOff(f6_3r,winSize,winStep,p,fs);
+SpeR7_1r = SpectralRollOff(f7_1r,winSize,winStep,p,fs);
+SpeR7_2r = SpectralRollOff(f7_2r,winSize,winStep,p,fs);
+SpeR7_3r = SpectralRollOff(f7_3r,winSize,winStep,p,fs);
+SpeR8_1r = SpectralRollOff(f8_1r,winSize,winStep,p,fs);
+SpeR8_2r = SpectralRollOff(f8_2r,winSize,winStep,p,fs);
+SpeR8_3r = SpectralRollOff(f8_3r,winSize,winStep,p,fs);
+SpeR9_1r = SpectralRollOff(f9_1r,winSize,winStep,p,fs);
+SpeR9_2r = SpectralRollOff(f9_2r,winSize,winStep,p,fs);
+SpeR9_3r = SpectralRollOff(f9_3r,winSize,winStep,p,fs);
+
+
+
+spectrogram(SpeC0_1l)
+figure
+spectrogram(SpeC1_1l)
+figure
+spectrogram(SpeC2_1l)
+figure
+spectrogram(SpeC3_1l)
+figure
+spectrogram(SpeC4_1l)
+figure
+spectrogram(SpeC5_1l)
+figure
+spectrogram(SpeC6_1l)
+figure
+spectrogram(SpeC7_1l)
+figure
+spectrogram(SpeC8_1l)
+figure
+spectrogram(SpeC9_1l)
+
+
+
+
+
+plot(rms0_1l);
+figure
+plot(rms1_1l);
+figure
+plot(rms2_1l);
+figure
+plot(rms3_1l);
+figure
+plot(rms4_1l);
+figure
+plot(rms5_1l);
+figure
+plot(rms6_1l);
+figure
+plot(rms7_1l);
+figure
+plot(rms8_1l);
+figure
+plot(rms9_1l);
+
+
+plot(amr0_1l);
+figure
+plot(amr1_1l);
+figure
+plot(amr2_1l);
+figure
+plot(amr3_1l);
+figure
+plot(amr4_1l);
+figure
+plot(amr5_1l);
+figure
+plot(amr6_1l);
+figure
+plot(amr7_1l);
+figure
+plot(amr8_1l);
+figure
+plot(amr9_1l);
+
+
+
+
+
+
